@@ -36,6 +36,36 @@ The library can be imported in the usual ways:
     import permutations
     from permutations import permutations
 
+Examples
+^^^^^^^^
+
+.. |permutations| replace:: ``permutations``
+.. _permutations: https://permutations.readthedocs.io/en/0.1.0/_source/permutations.html#permutations.permutations.permutations
+
+.. |Iterable| replace:: ``Iterable``
+.. _Iterable: https://docs.python.org/3/library/collections.abc.html#collections.abc.Iterable
+
+The |permutations|_ class can be used in the same way as the built-in |itertools_permutations|_ function:
+
+.. code-block:: python
+
+    >>> list(permutations(range(3)))
+    [(0, 1, 2), (0, 2, 1), (1, 0, 2), (1, 2, 0), (2, 0, 1), (2, 1, 0)]
+    >>> list(permutations(range(3), 2))
+    [(0, 1), (0, 2), (1, 0), (1, 2), (2, 0), (2, 1)]
+
+However, in addition to acting as an |Iterable|_ containing a collection of permutations, an instance also acts as a |Sequence|_. Thus, it supports retrieval of specific permutations by their index and its length can be determined without iterating over its elements:
+
+.. code-block:: python
+
+    >>> ps = permutations(range(5))
+    >>> ps[37]
+    (1, 3, 0, 4, 2)
+    >>> permutations(range(20))[7**20]
+    (0, 13, 9, 6, 14, 8, 17, 1, 5, 12, 15, 18, 11, 16, 10, 2, 3, 4, 19, 7)
+    >>> len(permutations(range(8))) == 8 * 7 * 6 * 5 * 4 * 3 * 2 * 1
+    True
+
 Development
 -----------
 All installation and development dependencies are fully specified in ``pyproject.toml``. The ``project.optional-dependencies`` object is used to `specify optional requirements <https://peps.python.org/pep-0621>`__ for various development tasks. This makes it possible to specify additional options (such as ``docs``, ``lint``, and so on) when performing installation using `pip <https://pypi.org/project/pip>`__:
