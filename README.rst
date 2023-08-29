@@ -31,7 +31,7 @@ Purpose
 .. |Sequence| replace:: ``Sequence``
 .. _Sequence: https://docs.python.org/3/library/collections.abc.html#collections.abc.Sequence
 
-This library provides a drop-in alternative to the built-in |itertools_permutations|_ function that also implements the features of a |Sequence|_, including the ability to access individual entries using the index (without iterating over all permutations up to that point).
+This library provides a drop-in alternative to the built-in |itertools_permutations|_ function that also implements the features of a |Sequence|_, including the ability to access individual entries using their index (without iterating over all permutations up to that point).
 
 Installation and Usage
 ----------------------
@@ -66,7 +66,7 @@ The |permutations|_ class can be used in the same way as the built-in |itertools
     >>> list(permutations(range(3), 2))
     [(0, 1), (0, 2), (1, 0), (1, 2), (2, 0), (2, 1)]
 
-However, in addition to acting as an |Iterable|_ containing a collection of permutations, an instance also acts as a |Sequence|_. Thus, it supports retrieval of specific permutations by their index and its length can be determined without iterating over its elements:
+However, in addition to acting as an |Iterable|_ containing a collection of permutations, an instance of |permutations|_ also acts as a |Sequence|_. In particular, it supports retrieval of specific permutations by their index and its length can be determined without iterating over its elements:
 
 .. code-block:: python
 
