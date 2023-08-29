@@ -31,7 +31,7 @@ Purpose
 .. |Sequence| replace:: ``Sequence``
 .. _Sequence: https://docs.python.org/3/library/collections.abc.html#collections.abc.Sequence
 
-This library provides a drop-in alternative to the built-in |itertools_permutations|_ function that also implements the features of a |Sequence|_, including the ability to access individual entries using their index (without iterating over all permutations up to that point).
+This library provides a drop-in alternative to the built-in |itertools_permutations|_ function. This alternative implements the features of a |Sequence|_, including the ability to access individual entries using their index (without iterating over all permutations up to that point).
 
 Installation and Usage
 ----------------------

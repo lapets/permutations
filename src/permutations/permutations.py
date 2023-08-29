@@ -104,7 +104,9 @@ class permutations(collections.abc.Sequence):
         (1, 3, 0, 4, 2)
 
         This method makes it possible to retrieve a permutation that
-        appears anywhere in the sequence using its index.
+        appears anywhere in the sequence using its index. The permutation
+        is built directly using the supplied index (*i.e.*, no iteration
+        occurs over the elements in this instance).
 
         >>> permutations(range(20))[7**20]
         (0, 13, 9, 6, 14, 8, 17, 1, 5, 12, 15, 18, 11, 16, 10, 2, 3, 4, 19, 7)
@@ -151,10 +153,16 @@ class permutations(collections.abc.Sequence):
     def __iter__(self: permutations) -> collections.abc.Iterator:
         """
         Return an iterator that yields every permutation included in
-        this instance. Permutations appear in the same order as that
-        used by the built-in :obj:`itertools.permutations` function.
+        this instance.
 
         >>> [p for p in permutations(range(3), 2)]
+        [(0, 1), (0, 2), (1, 0), (1, 2), (2, 0), (2, 1)]
+
+        Permutations appear in the same order as that
+        used by the built-in :obj:`itertools.permutations` function.
+
+        >>> import itertools
+        >>> [p for p in itertools.permutations(range(3), 2)]
         [(0, 1), (0, 2), (1, 0), (1, 2), (2, 0), (2, 1)]
         """
         return (self[i] for i in range(self._length))
