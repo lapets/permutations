@@ -4,11 +4,19 @@ permutations
 
 Python library for instantiating and working with permutation collections that provide efficient implementations of all sequence methods (including random-access retrieval by index).
 
-|pypi|
+|pypi| |actions| |coveralls|
 
 .. |pypi| image:: https://badge.fury.io/py/permutations.svg
    :target: https://badge.fury.io/py/permutations
    :alt: PyPI version and link.
+
+.. |actions| image:: https://github.com/lapets/permutations/workflows/lint-test-cover-docs/badge.svg
+   :target: https://github.com/lapets/permutations/actions/workflows/lint-test-cover-docs.yml
+   :alt: GitHub Actions status.
+
+.. |coveralls| image:: https://coveralls.io/repos/github/lapets/permutations/badge.svg?branch=main
+   :target: https://coveralls.io/github/lapets/permutations?branch=main
+   :alt: Coveralls test coverage summary.
 
 Purpose
 -------
