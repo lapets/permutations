@@ -4,11 +4,15 @@ permutations
 
 Python library for instantiating and working with permutation collections that provide efficient implementations of all sequence methods (including random-access retrieval by index).
 
-|pypi| |actions| |coveralls|
+|pypi| |readthedocs| |actions| |coveralls|
 
 .. |pypi| image:: https://badge.fury.io/py/permutations.svg
    :target: https://badge.fury.io/py/permutations
    :alt: PyPI version and link.
+
+.. |readthedocs| image:: https://readthedocs.org/projects/permutations/badge/?version=latest
+   :target: https://permutations.readthedocs.io/en/latest/?badge=latest
+   :alt: Read the Docs documentation status.
 
 .. |actions| image:: https://github.com/lapets/permutations/workflows/lint-test-cover-docs/badge.svg
    :target: https://github.com/lapets/permutations/actions/workflows/lint-test-cover-docs.yml
@@ -130,7 +134,7 @@ This library can be published as a `package on PyPI <https://pypi.org/project/pe
 
     python -m pip install .[publish]
 
-Ensure that the correct version number appears in ``pyproject.toml``. Create and push a tag for this version (replacing ``?.?.?`` with the version number):
+Ensure that the correct version number appears in ``pyproject.toml``, and that any links in this README document to the Read the Docs documentation of this package (or its dependencies) have appropriate version numbers. Also ensure that the Read the Docs project for this library has an `automation rule <https://docs.readthedocs.io/en/stable/automation-rules.html>`__ that activates and sets as the default all tagged versions. Create and push a tag for this version (replacing ``?.?.?`` with the version number):
 
 .. code-block:: bash
 
