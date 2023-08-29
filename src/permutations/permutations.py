@@ -93,7 +93,7 @@ class permutations(collections.abc.Sequence):
         """
         return self._length
 
-    def __getitem__(self: permutations, i: int) -> Any:
+    def __getitem__(self: permutations, key: int) -> Any:
         """
         Return a specific permutation corresponding to the supplied index.
         Permutations are indexed in the same order as that used by the
@@ -123,8 +123,10 @@ class permutations(collections.abc.Sequence):
           ...
         IndexError: index out of range
         """
-        if not isinstance(i, int):
+        if not isinstance(key, int):
             raise TypeError('indices must be integers')
+
+        i = key # Only integer indices are supported.
 
         if i >= self._length or i < -self._length:
             raise IndexError('index out of range')
@@ -146,10 +148,10 @@ class permutations(collections.abc.Sequence):
 
         return tuple(permutation)
 
-    def __iter__(self: permutations) -> Iterable:
+    def __iter__(self: permutations) -> collections.abc.Iterator:
         """
-        Return an iterable that yield ever permutation represented by
-        this instance. Permutations are appear in the same order as that
+        Return an iterator that yields every permutation included in
+        this instance. Permutations appear in the same order as that
         used by the built-in :obj:`itertools.permutations` function.
 
         >>> [p for p in permutations(range(3), 2)]
