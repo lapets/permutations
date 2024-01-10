@@ -1,2 +1,2 @@
 """Allow users to access the class directly."""
-from permutations import permutations
+from permutations.permutations import permutations

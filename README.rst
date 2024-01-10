@@ -52,7 +52,7 @@ Examples
 ^^^^^^^^
 
 .. |permutations| replace:: ``permutations``
-.. _permutations: https://permutations.readthedocs.io/en/0.1.0/_source/permutations.html#permutations.permutations.permutations
+.. _permutations: https://permutations.readthedocs.io/en/0.2.0/_source/permutations.html#permutations.permutations.permutations
 
 .. |Iterable| replace:: ``Iterable``
 .. _Iterable: https://docs.python.org/3/library/collections.abc.html#collections.abc.Iterable
